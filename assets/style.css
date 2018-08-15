@@ -1,0 +1,52 @@
+body{
+    background-color: rgb(215, 156, 78);
+    /*background-image: url("beerground.jpg");
+    background-repeat: no-repeat;*/
+}
+
+.container{
+    border: 5px solid;
+    height: 225px;
+    width: 80%;
+    margin: auto;
+    font-family: 'Press Start 2P', cursive;
+    background-color: rgb(209, 248, 239)
+}
+
+
+header{
+    font-size: 90px;
+    text-align: center;
+    padding-top: 25px;
+    
+}
+
+.slogan{
+    font-size: 26px;
+    text-align: center;
+
+}
+
+.underscores{
+    border: 2px solid;
+    font-size: 100px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    width: 65%;
+    padding: 10px;
+}
+
+.rightGuess{
+    border: 2px solid;
+    width: 500px;
+    height: 45px;
+    padding: 5px;
+}
+
+.wrongGuess{
+    border: 2px solid;
+    width: 500px;
+    height: 45px;
+    padding: 5px;
+}
