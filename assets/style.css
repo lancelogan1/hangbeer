@@ -2,6 +2,7 @@ body{
     background-color: rgb(215, 156, 78);
     /*background-image: url("beerground.jpg");
     background-repeat: no-repeat;*/
+    margin-top: 20px;
 }
 
 .container{

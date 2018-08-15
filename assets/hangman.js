@@ -1,12 +1,14 @@
 //array with answers - 11 words
-let beer = ["Ale", "Lager", "IPA", "Blonde", "Boch", "Pilsner", "Kolsch", "Porter", "Stout", "Amber", "Pale"];
+let beer = ["ale", "lager", "ipa", "blonde", "boch", "pilsner", "kolsch", "porter", "stout", "amber", "pale"];
 
 //choose word randomly
 let random = Math.floor(Math.random() * beer.length);
 let word = beer[random];
+let rightletter = [];
+let wrongletter = [];
 let underscore = [];
 
-//console.log(word);
+console.log(word);
 
 //underscores based on length of word
 let genUnderscore = () => {
@@ -21,8 +23,20 @@ console.log(genUnderscore());
 
 document.addEventListener("keypress", (event) => {
     let keycode = event.keyCode;
-    let keyword = String.fromCharCode(keycode);
-    console.log (keyword);
+    let keyletter = String.fromCharCode(keycode);
+    
+    console.log(keyletter);
+
+//right letter    
+    if (word.indexOf(keyletter) > -1){
+        rightletter.push(keyletter);
+        console.log(rightletter);
+    } else {
+        wrongletter.push(keyletter);
+        console.log(wrongletter);
+    }
+    
+    
 });
 
 //check if guess is right
