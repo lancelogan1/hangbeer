@@ -1,12 +1,15 @@
 //array with answers - 11 words
 let beer = ["ale", "lager", "ipa", "blonde", "boch", "pilsner", "kolsch", "porter", "stout", "amber", "pale"];
 
-//choose word randomly
+//variables
 let random = Math.floor(Math.random() * beer.length);
 let word = beer[random];
 let rightletter = [];
 let wrongletter = [];
 let underscore = [];
+
+//manipulation 
+let underscorechange = document.getElementsByClassName("underscores");
 
 console.log(word);
 
@@ -14,32 +17,38 @@ console.log(word);
 let genUnderscore = () => {
     for(let i = 0; i< word.length; i++) {
         underscore.push("_");
+        
     }
     return underscore;
 }
 console.log(genUnderscore());
 
 //get user input guess
-
 document.addEventListener("keypress", (event) => {
     let keycode = event.keyCode;
     let keyletter = String.fromCharCode(keycode);
     
     console.log(keyletter);
 
-//right letter    
+//right letter / wrong letter   
     if (word.indexOf(keyletter) > -1){
         rightletter.push(keyletter);
-        console.log(rightletter);
+        
+        underscore [word.indexOf(keyletter)] = keyletter;
+        underscorechange[0].innerHTML = underscore.join(" ");
+        if (underscore.join("") === word) {
+            alert("WIN"); 
+        }
+        console.log(underscore);
     } else {
         wrongletter.push(keyletter);
         console.log(wrongletter);
-    }
-    
-    
+    }    
 });
 
-//check if guess is right
-//push to right array
-//push to wrong array
+    //underscore.join("");
+   //underscorechange[0].innerHTML = genUnderscore().join("");
+
+    
+
 
