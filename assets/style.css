@@ -51,3 +51,9 @@ header{
     height: 45px;
     padding: 5px;
 }
+.lives{
+    border: 2px solid;
+    width: 500px;
+    height: 45px;
+    padding: 5px;
+}
