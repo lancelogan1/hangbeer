@@ -7,12 +7,13 @@ let word = beer[random];
 let rightletter = [];
 let wrongletter = [];
 let underscore = [];
-let lives = 5;
+let lives = 9;
 let anyKeyToStart = false;
 //manipulation 
 let underscorechange = document.getElementsByClassName("underscores");
 let livesHTML = document.getElementsByClassName('livesd')
 let docRightLetter = document.getElementsByClassName ("rightGuess");
+let docWrongLetter = document.getElementsByClassName('wrongGuess');
 console.log(word);
 //underscores based on length of word
 let genUnderscore = () => {
@@ -38,6 +39,7 @@ document.addEventListener("keypress", (event) => {
             //right letter / wrong letter   
             if (word.charAt(i) === keyletter) {
                 rightletter.push(keyletter);
+                docRightLetter[0].innerHTML = rightletter;
                 console.log(rightletter);
     
                 underscore[i] = keyletter;
@@ -63,6 +65,7 @@ document.addEventListener("keypress", (event) => {
             wrongletter.push(keyletter);
             lives--;
             livesHTML[0].innerHTML = lives;
+            docWrongLetter[0].innerHTML = wrongletter;
             if (lives === 0) {
                 location.reload();
                 alert('GAME OVER!!');
